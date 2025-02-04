@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <div className='bg-black flex flex-col items-center py-10 md:py-15 text-white'>
             <div>
-                <img className='rounded-full h-68 my-8' src={profile} alt="" />
+                <img className='rounded-full h-68 my-8 drop-shadow-[0_0_20px_rgba(255,105,180,0.4)]' src={profile} alt="" />
             </div>
             <div className='lg:flex text-2xl md:text-3xl padding'>
                 <div className='block flex'>
@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
             <button className='text-black lg:text-md text-sm font-bold px-6 py-2 my-4 rounded-full 
                      bg-gradient-to-r from-green-400 to-blue-500 shadow-lg hover:scale-105 
-                     transition-transform duration-300'>Download Resume</button>
+                     transition-transform duration-300  drop-shadow-[0_0_15px_rgba(0,255,127,0.7)]'>Download Resume</button>
         </div>
     )
 }
