@@ -4,10 +4,10 @@ const Hero = () => {
     return (
         <div className='bg-black flex flex-col items-center py-10 md:py-15 text-white'>
             <div>
-                <img className='rounded-full h-68 my-8 drop-shadow-[0_0_20px_rgba(255,105,180,0.4)]' src={profile} alt="" />
+                <img className='rounded-full h-68 my-8 drop-shadow-[0_0_20px_rgba(0,180,127,0.4)]' src={profile} alt="" />
             </div>
             <div className='lg:flex text-2xl md:text-3xl padding'>
-                <div className='block flex'>
+                <div className=' flex'>
                     <div className='px-2'>I'm</div> 
                     <div className='bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent'>Sayyedbehzad Hashemian</div>
                 </div>
