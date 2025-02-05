@@ -18,14 +18,16 @@ const ProjectCard = (props) => {
         return null;
     }
     return (
-        <div className='flex flex-col border-2 rounded-4xl border-blue-300 p-6'>
+        <div className='flex flex-col border-2 justify-between rounded-4xl border-blue-300 p-6 mx-4 transition-transform duration-300 ease-in-out 
+                       hover:shadow-lg hover:shadow-blue-400 
+                       hover:border-blue-500 ' >
             <div className='flex flex-col items-center text-center'>
                 <img className='w-[100%] rounded-2xl' src={props.img} alt="" />
                 <div className='text-xl font-semibold mt-4'>{props.name}</div>
 
             </div>
             <div className='flex justify-center mt-8'>
-                <button className='border-2 p-2 rounded-3xl' onClick={() => setShowDetail(!ShowDetail)}>Show Details</button>
+                <button className='border-2 p-2 rounded-3xl hover:scale-105 transition-transform duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-400 hover:border-blue-500' onClick={() => setShowDetail(!ShowDetail)}>Show Details</button>
             </div>
             {detailpopup()}
         </div>
