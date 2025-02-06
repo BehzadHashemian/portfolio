@@ -6,7 +6,11 @@ const Hero = () => {
             <div className='absolute blue__gradient h-[40%] w-[30%] z-[1] right-12 top-20 opacity-85'></div>
             <div className='absolute blue__gradient h-[40%] w-[80%] sm:w-[60%] md:w-[40%] z-[1] left-12 top-80 opacity-85'></div>
             <div>
-                <img className='rounded-full h-68 my-8 drop-shadow-[0_0_20px_rgba(0,180,127,0.4)]' src={profile} alt="" />
+                <img
+                    className="rounded-full h-68 my-8 drop-shadow-[0_0_20px_rgba(0,180,127,0.4)] "
+                    src={profile}
+                    alt="Profile"
+                />
             </div>
             <div className='lg:flex text-2xl md:text-3xl padding'>
                 <div className=' flex'>

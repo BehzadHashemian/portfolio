@@ -44,8 +44,8 @@ const Skills = () => {
 
 
     return (
-        <div className='bg-black text-white flex-col ' >
-            <div className='text-6xl text-center'>
+        <div id="skills" className='bg-black text-white flex-col ' >
+            <div className='text-6xl text-center font-bold'>
                 Skills
             </div>
             <div className='bg-black text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 py-10'>
