@@ -10,7 +10,7 @@ const About = () => {
                 <div className='flex-1'>
                     <img className='rounded-4xl md:w-[60%] m-auto' src={about} alt="" />
                 </div>
-                <div className='flex-1 md:px-10 m-auto md:text-2xl my-6 px-4 text-lg font-medium text-justify'>
+                <div className='flex-1 md:px-10 m-auto md:text-2xl my-6 px-4 text-lg font-light text-justify'>
                     {message}
                 </div>
             </div>
