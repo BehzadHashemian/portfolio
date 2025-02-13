@@ -5,7 +5,7 @@ const SkillCard = ({ skills , name , img}) => {
         <div className='mx-2 px-4 py-6 border-2 rounded-4xl border-blue-300 shadow-[0_0_15px_3px_rgba(0,191,255,0.6)]'>
             <div className='flex px-2 justify-center'>
                 <img className='w-[10%] rounded-full mx-4 mb-4' src={img} alt="" />
-                <div className='text-md '>{formatCategoryName(name)}</div>
+                <div className='text-md '>{name}</div>
             </div>
             
             {skills.map((skill, index) => (
@@ -22,14 +22,5 @@ const SkillCard = ({ skills , name , img}) => {
         </div>
     )
 }
-const formatCategoryName = (category) => {
-    const categoryMap = {
-        frontend: "Front-End Development",
-        databases: "Database Management",
-        cloud: "Cloud & Container Technologies",
-        mobile: "Mobile Development",
-        python_ml: "Machine Learning",
-    };
-    return categoryMap[category] || category;
-};
+
 export default SkillCard

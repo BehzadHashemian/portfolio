@@ -1,35 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from 'react'
 import SkillCard from './SkillCard'
 import pic from '../assets/profile.jpeg'
 
 const Skills = () => {
-
-    const [skills, setSkills] = useState([]);
-
-    useEffect(() => {
-        fetch("http://127.0.0.1:8000/skills/")
-            .then(response => response.json())
-            .then(data => setSkills(data))
-            .catch(error => console.error("Error fetching skills:", error));
-    }, []);
-
-
-    console.log(skills)
-
-
-    
-    // Group skills by category
-    const categories = {};
-    skills.forEach(skill => {
-        if (!categories[skill.category]) {
-            categories[skill.category] = [];
-        }
-        categories[skill.category].push(skill);
-    });
-
-
-    console.log(categories)
-
     const frontend = [
         { name: "React", level: 100 },
         { name: "JavaScript", level: 100 },
@@ -71,14 +44,21 @@ const Skills = () => {
 
 
     return (
-        <div id="skills" className="bg-black text-white flex-col">
-            <div className="text-6xl text-center font-bold">Skills</div>
-            <div className="bg-black text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 py-10">
-                {Object.keys(categories).map((category, index) => (
-                    <SkillCard key={index} skills={categories[category]} name={category} img={pic} />
-                ))}
+        <div id="skills" className='bg-black text-white flex-col ' >
+            <div className='text-6xl text-center font-bold'>
+                Skills
+            </div>
+            <div className='bg-black text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 py-10'>
+                <SkillCard skills={frontend} name="Front-End Development" img={pic} />
+                <SkillCard skills={databases} name="Database Management" img={pic} />
+                <SkillCard skills={cloudAndContainerTech} name="Cloud & Container Technologies" img={pic} />
+                <SkillCard skills={mobileAndUIUX} name="Mobile Development" img={pic} />
+                <SkillCard skills={pythonAndML} name="Machine Learning" img={pic} />
+
+
             </div>
         </div>
+
     );
 
 
