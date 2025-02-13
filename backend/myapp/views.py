@@ -6,5 +6,5 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def getskills(request):
     skills = Skill.objects.all()
-    serilizer = SkillSerializer(skills)
+    serilizer = SkillSerializer(skills , many = True)
     return Response(serilizer.data)
