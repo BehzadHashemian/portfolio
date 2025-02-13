@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard'
 import proimg from '../assets/sql.webp'
 import rentalmovie from '../assets/sql-movie.jpg'
@@ -71,15 +71,33 @@ const Projects = () => {
         "Utilized Vite for fast build times and optimized development workflow...",
         "Leveraged React’s component-based architecture for dynamic content and state management, while Tailwind CSS provided a responsive, utility-first design."
       ],
-      loc: "Personal", 
+      loc: "Personal",
     },
   ];
+  const [projectsDatas, setProjectsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/project/')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProjectsData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
 
 
 
-
-
-
+  console.log(projectsDatas)
 
 
   return (
@@ -88,11 +106,11 @@ const Projects = () => {
         Projects
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {projectsData.map((project, index) => (
+        {projectsDatas.map((project, index) => (
           <ProjectCard
             key={index}
             name={project.name}
-            img={project.img}
+            img={`http://127.0.0.1:8000${project.img}`}
             desc={project.desc}
             loc={project.loc}
           />
