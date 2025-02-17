@@ -6,8 +6,8 @@ const About = () => {
     return (
         <div id="about" className=' flex flex-col bg-black text-white text-center font-bold text-6xl py-10'>
             About This Website
-            <div className='absolute blue__gradient h-[40%] w-[30%] z-[1] right-12 top-20 opacity-85'></div>
-            <div className='absolute blue__gradient h-[40%] w-[80%] sm:w-[60%] md:w-[40%] z-[1] left-12 top-80 opacity-70'></div>
+            {/* <div className='absolute blue__gradient h-[40%] w-[30%] z-[1] right-12 top-20 opacity-85'></div>
+            <div className='absolute blue__gradient h-[40%] w-[80%] sm:w-[60%] md:w-[40%] z-[1] left-12 top-80 opacity-70'></div> */}
 
             <div className='flex md:flex-row flex-col bg-black text-white px-4 md:px-10 my-10 md:my-15 items-center'>
                 <div className='flex-1'>

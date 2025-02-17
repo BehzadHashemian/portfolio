@@ -6,8 +6,8 @@ const Hero = () => {
     };
 
     return (
-        <div id="home" className='bg-black flex flex-col items-center py-10 md:py-15 text-white'>
-            <div className='absolute blue__gradient h-[40%] w-[30%] z-[1] right-12 top-20 opacity-85'></div>
+        <div id="home" className='bg-black flex flex-col items-center  text-white scroll-mt-40 pt-30'>
+            <div className='absolute blue__gradient h-[40%] w-[30%] z-[1] right-12 top-60 opacity-85'></div>
             <div className='absolute blue__gradient h-[40%] w-[80%] sm:w-[60%] md:w-[40%] z-[1] left-12 top-80 opacity-85'></div>
             <div>
                 <img

@@ -51,11 +51,11 @@ const Skills = () => {
 
 
     return (
-        <div id="skills" className='bg-black text-white flex-col ' >
-            <div className='text-6xl text-center font-bold'>
+        <div id="skills" className='bg-black text-white flex-col scroll-mt-20' >
+            <div className='text-4xl lg:text-6xl text-center font-bold'>
                 Skills
             </div>
-            <div className='bg-black text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 py-10'>
+            <div className='bg-black text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 py-10 '>
                 <SkillCard skills={frontend} name="Web Development"  />
                 <SkillCard skills={databases} name="Database Management"  />
                 <SkillCard skills={cloudAndContainerTech} name="DevOps & Cloud"  />
