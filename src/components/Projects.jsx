@@ -83,11 +83,11 @@ const Projects = () => {
 
 
   return (
-    <div id="project" className='bg-black text-white flex-col justify-center'>
+    <div id="project" className='bg-black text-white flex-col justify-center pt-6 px-2'>
       <div className='text-6xl text-center font-bold py-6 pb-10'>
         Projects
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-10 py-4'>
         {projectsData.map((project, index) => (
           <ProjectCard
             key={index}
