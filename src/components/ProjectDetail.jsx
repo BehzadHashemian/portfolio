@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectDetail = (props) => {
     return (
-        <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
+        <div className='fixed z-50 top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50'>
             <div className='flex flex-col border-2 rounded-4xl w-[90%] md:w-[70%] lg:w-[50%] border-blue-300 p-6'>
 
                 <div className='flex flex-col'>
