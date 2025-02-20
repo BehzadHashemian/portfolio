@@ -7,10 +7,21 @@ import driver from '../assets/driver.jpg'
 import kuber from '../assets/kuber.jpg'
 import music from '../assets/music.jpg'
 import bank from '../assets/bank.jpg'
-
+import note from '../assets/note.jpg'
 const Projects = () => {
 
   const projectsData = [
+    {
+      name: "NoteHub , a note app",
+      img: note,
+      desc: [
+        "Developed a full-stack note-taking app using React (frontend) and Django (backend) with user authentication.",
+        "Implemented a secure login system and RESTful API to manage user notes efficiently.",
+        "Implemented JWT-based authentication and secure API endpoints.",
+        "Designed a responsive UI for seamless note creation, editing, and deletion across devices."
+      ],
+      loc: "Personal"
+    },
     {
       name: "Rental Movie Data Warehouse",
       img: rentalmovie,
